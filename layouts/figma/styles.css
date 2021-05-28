@@ -1,0 +1,87 @@
+
+input[id="list"]:checked ~ .project-list {
+  border: 10px solid blue;
+  gap: .5rem;
+}
+
+input[id="list"]:checked ~ .project-list .project {
+  height: 50px;
+  display: grid;
+  gap: 1rem;
+  align-items: center;
+  grid-template-columns: 50px 1fr 100px 100px;
+}
+
+input[id="list"]:checked ~ .project-list .project img {
+  width: 50px;
+}
+
+
+input[id="grid"]:checked ~ .project-list {
+  border: 10px solid green;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+input[id="grid"]:checked ~ .project-list .project {
+  height: 200px;
+  padding: 0;
+  display: grid;
+  grid-template-rows: 80% 1fr 1fr;
+  grid-template-columns: 100px 1fr;
+
+  border: 1px solid red;
+  align-items: center;
+  border-radius: .5rem;
+  overflow: hidden;
+}
+
+input[id="grid"]:checked ~ .project-list .project img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  grid-area: 1 / 1 / 2 / 3;
+}
+
+input[id="grid"]:checked ~ .project-list .project .name {
+  grid-area: 2 / 1 / 4 / 2;
+}
+
+input[id="grid"]:checked ~ .project-list .project time:nth-of-type(1) {
+  grid-area: 2 / 2 / 3 / 3;
+  border: 1px solid red;
+}
+
+input[id="grid"]:checked ~ .project-list .project time:nth-of-type(2) {
+  grid-area: 3 / 2 / 4 / 3;
+  border: 1px solid blue;
+}
+
+
+.project-list {
+  display: grid;
+  padding: 1rem;
+}
+
+.project {
+  border: 1px solid red;
+  padding: 1rem;
+}
+
+.project-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+input {
+  display: none;
+}
+label {
+  border: 1px solid red;
+  cursor: pointer;
+}
+
+input[id="grid"]:checked ~ .project-actions [for="grid"],
+input[id="list"]:checked ~ .project-actions [for="list"] {
+  background: red;
+}

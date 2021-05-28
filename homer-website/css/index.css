@@ -1,0 +1,15 @@
+body {
+  margin: 0;
+}
+.grid {
+  background: red;
+  height: calc(var(--vh) * 100);
+  display: grid;
+  inline-size: 1000px;
+  /* block-size: 500px; */
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.dios {
+}

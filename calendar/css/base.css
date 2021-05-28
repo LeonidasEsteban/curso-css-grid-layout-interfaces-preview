@@ -1,0 +1,64 @@
+
+:root {
+  --blue10: #1c7eeb;
+  --blue20: #02a5e8;
+  --red10: #eb4e44;
+  --gray10: #f3f5f5;
+  --gray20: #7b8085;
+  --gray30: #44494c;
+  --gray50: #262626;
+  --white: #fffffe;
+  --baseFont: "Roboto", sans-serif;
+  --body3Regular: 10px/normal var(--baseFont);
+  --body3Regular: 10px/normal var(--baseFont);
+}
+body {
+  margin: 0;
+  font-family: system-ui;
+}
+
+
+
+.hourCell {
+  /* display: flex; */
+  /* flex: 1; */
+  color: var(--gray20);
+  transform: translateY(-50%);
+  box-sizing: border-box;
+  /* height: container-fluid; */
+  /* display: contents; */
+  font: var(--body3Regular);
+  padding-inline-end: .5rem;
+  position: sticky;
+  top: 65px;
+  border: 1px solid red;
+  /* border: 1px solid red; */
+}
+
+
+.task {
+  color: var(--white);
+  background-color: var(--blue10);
+  padding-inline-start: 1rem;
+  padding-inline-end: 1rem;
+  padding-block-start: 10px;
+  padding-block-end: 10px;
+  font-size: 12px;
+  letter-spacing: 0.5%;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  border-radius: 4px;
+}
+
+.task p {
+  margin: 0;
+}
+
+
+.calendarDay {
+  padding: 1em;
+  text-align: center;
+  border-bottom: 1px solid var(--gray20);
+}
+

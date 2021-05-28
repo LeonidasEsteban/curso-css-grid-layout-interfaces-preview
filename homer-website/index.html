@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/index.css">
+  <title>Homer's Website</title>
+</head>
+<body>
+  <div class="grid">
+    <img src="./images/boca.gif" alt="">
+    <img src="./images/campana.gif" alt="">
+    <img src="./images/dios.gif" alt="" class="dios">
+    <img src="./images/gusano.gif" alt="">
+    <img src="./images/reloj.gif" alt="">
+    <img src="./images/tostadora.gif" alt="">
+  </div>
+  <script>
+    window.addEventListener('resize', setVH)
+    function setVH() {
+      const vh = window.innerHeight * 0.01
+      document.documentElement.style.setProperty('--vh', `${vh}px`)
+
+    }
+    setVH()
+  </script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+.wrapper {
+  margin: auto;
+  max-width: 632px;
+  border: 1px solid purple;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 200px 200px 200px;
+  gap: 1rem;
+}
+
+.post {
+  border: 1px solid blue;
+  block-size: 200px;
+  inline-size: 200px;
+  display: grid;
+}
