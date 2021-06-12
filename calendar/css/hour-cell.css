@@ -1,0 +1,33 @@
+
+.hourCell {
+  color: var(--gray20);
+  transform: translateY(-50%);
+  /* height: container-fluid; */
+  /* display: contents; */
+  font: var(--body3-regular);
+  padding-inline-end: 1rem;
+  place-self: start end;
+
+  /* Si logro manterner el sticky */
+  /* display: flex;
+  justify-content: flex-end;
+  align-items: flex-end; */
+  /* position: sticky;
+  left: 0;
+  background: var(--white); */
+
+  position: relative;
+}
+
+.hourCell::before {
+  content: '';
+  inline-size: .5rem;
+  block-size: 1px;
+  background: currentColor;
+  position: absolute;
+  right: 0;
+  bottom: 50%;
+}
+
+
+

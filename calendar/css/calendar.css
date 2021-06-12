@@ -1,0 +1,55 @@
+@import './task-cell.css';
+@import './caledar-day.css';
+@import './hour-cell.css';
+@import './timezone-cell.css';
+@import './task.css';
+
+.currentTime {
+  block-size: 2px;
+  background-color: var(--red10);
+  inline-size: 5rem;
+  position: absolute;
+  z-index: 2;
+  /* left: 0; */
+  /* right: 0; */
+}
+
+.currentTime::before {
+  content: '';
+  inline-size: 1rem;
+  block-size: 1rem;
+  display: block;
+  border-radius: 50%;
+  background: var(--red10);
+  position: absolute;
+  transform: translateY(-50%);
+}
+
+.calendar {
+  padding-inline: 1.5rem;
+  color: var(--gray20);
+  --minCellInlineSize: 5rem;
+  --maxCellInlineSize: 10rem;
+  --minCellBlockSize: 4rem;
+  --maxCellBlockSize: auto;
+  /* overflow: auto; */
+
+  position: relative;
+}
+
+
+.calendarDay {
+  padding: 1em;
+  text-align: center;
+  border-bottom: 1px solid currentColor;
+}
+
+.calendar-week {
+  display: grid;
+  grid-template-columns: auto repeat(7, minmax(var(--minCellInlineSize), 1fr));
+  grid-template-rows: minmax(var(--minCellBlockSize), 7rem) repeat(24, minmax(var(--minCellBlockSize), var(--maxCellBlockSize)));
+  min-block-size: 100vh;
+  min-block-size: 700px;
+  /* overflow: auto; */
+}
+

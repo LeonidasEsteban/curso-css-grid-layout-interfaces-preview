@@ -1,0 +1,32 @@
+.header {
+  /* border: 1px solid red; */
+  /* block-size: 6rem; */
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-block-end: 1px solid var(--gray10);
+}
+
+.header-primary {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.header-secondary {
+  display: flex;
+  gap: 3rem;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+}
+
+.header-date {
+  border: 1px solid red;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}

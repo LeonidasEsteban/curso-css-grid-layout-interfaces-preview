@@ -1,0 +1,8 @@
+.select {
+  border: 1px solid red;
+  padding-block: .5rem;
+  padding-inline: .75rem;
+  border: 1px solid var(--gray20);
+  border-radius: .25rem;
+  font: var(--button-button)
+}

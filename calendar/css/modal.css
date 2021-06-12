@@ -1,0 +1,25 @@
+.modal {
+  position: absolute;
+  top: 300px;
+  left: 400px;
+  background-color: var(--white);
+  min-inline-size: 500px;
+  border-radius: .25rem;
+  padding-inline: 3rem;
+  padding-block: 1.5rem;
+  box-shadow: 1.0719px 30.9815px 92px rgba(0, 0, 0, 0.0274815), 0.412881px 11.9336px 29.3037px rgba(0, 0, 0, 0.0425185), 0.0873403px 2.52442px 7.4963px rgba(0, 0, 0, 0.07);
+  flex-direction: column;
+  gap: 1.5rem;
+  border: none;
+  margin: initial;
+}
+
+.modal[open] {
+  display: flex;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: .5rem;
+}
