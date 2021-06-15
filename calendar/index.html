@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,30 +8,30 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/index.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <title>Calendar</title>
+  <title>Google Calendar - Semana del 14 de Junio de 2021</title>
 </head>
 <body>
   <div class="page">
     <header class="header">
       <div class="header-primary">
         <div class="header-logo">
-          <button class="sidebarToggle">
+          <button class="button is-rounded is-compact" aria-expanded="true" aria-label="Menú principal" title="Menú principal">
             <i class="icon-hamburguerButton"></i>
           </button>
-          <a href="/" aria-current="page">
+          <a href="/" aria-current="page" aria-label="Calendar" tabindex="-1">
             <img src="./images/logo.png" alt="Leonidas Esteban Logo">
           </a>
         </div>
 
         <div class="calendarStatus">
-          <button class="button is-secondary" title="Viernes 11 de Junio">
+          <button class="button is-secondary" aria-label="Hoy, Viernes 11 de Junio" title="Viernes 11 de Junio">
             Hoy
           </button>
           <span class="calendarStatus-navigation">
-            <a href="#prev" class="calendarNavigation-prev">
+            <a href="#prev" class="button is-rounded is-compact" aria-label="Semana Anterior">
               <i class="icon-chevronLeft"></i>
             </a>
-            <a href="#next" class="calendarNavigation-next">
+            <a href="#next" class="button is-rounded is-compact" aria-label="Próxima Semana">
               <i class="icon-chevronRight"></i>
             </a>
           </span>
@@ -46,28 +46,29 @@
         <button class="button is-rounded is-compact">
           <i class="icon-plus"></i>
         </button> -->
-        <select name="" id="" class="select">
-          <option value="">Día</option>
-          <option value="">Semana</option>
-          <option value="">Mes</option>
+        <select name="calendar-type" id="calendar-type" class="select">
+          <option value="day">Día</option>
+          <option value="week">Semana</option>
         </select>
-        <img src="./images/avatar.png" alt="">
+        <div class="user" tabindex="0" aria-label="Menú del usuario">
+          <img src="./images/avatar.png" alt="">
+        </div>
       </div>
 
     </header>
     <div class="sidebar">
-      <button class="button is-rounded">
+      <button class="button is-rounded is-shadowed">
         <i class="icon-plus"></i>
         Crear
       </button>
-      <div class="miniCalendar">
+      <div class="miniCalendar" aria-label="Calendario de navegación">
         <div class="miniCalendar-status">
           <time datetime="2021-06-10">Junio 2021</time>
           <div class="miniCalendar-navigation">
-            <a href="#prevMonth" title="Mes anterior">
+            <a class="button is-compact is-rounded" href="#prevMonth" title="Mes anterior">
               <i class="icon-chevronLeft"></i>
             </a>
-            <a href="#nextMonth" title="Mes siguiente">
+            <a class="button is-compact is-rounded" href="#nextMonth" title="Mes siguiente">
               <i class="icon-chevronRight"></i>
             </a>
           </div>
@@ -92,7 +93,7 @@
           <div class="miniCalendar-monthDay">7</div>
           <div class="miniCalendar-monthDay">8</div>
           <div class="miniCalendar-monthDay">9</div>
-          <div class="miniCalendar-monthDay is-active">10</div>
+          <div class="miniCalendar-monthDay is-active" tabindex="0">10</div>
           <div class="miniCalendar-monthDay">11</div>
           <div class="miniCalendar-monthDay">12</div>
           <div class="miniCalendar-monthDay">13</div>
@@ -132,31 +133,59 @@
 
       <div class="calendar-week">
         <div class="timezoneCell">GMT-5</div>
-        <div class="calendarDay"><time datetime="2020-06-06"><span>DOM</span> <br> <span>6</span></time></div>
-        <div class="calendarDay"><time datetime="2020-06-08"><span>LUN</span> <br> <span>7</span></time></div>
-        <div class="calendarDay"><time datetime="2020-06-08"><span>MAR</span> <br> <span>8</span></time></div>
-        <div class="calendarDay"><time datetime="2020-06-09"><span>MIE</span> <br> <span>9</span></time></div>
-        <div class="calendarDay is-selected"><time datetime="2020-06-10"><span>JUE</span> <br> <span>10</span></time></div>
-        <div class="calendarDay"><time datetime="2020-06-11"><span>VIE</span> <br> <span>11</span></time></div>
-        <div class="calendarDay"><time datetime="2020-06-12"><span>SAB</span> <br> <span>12</span></time></div>
+        <h2 class="calendarDay" >
+          <a href="./calendar-by-day.html" aria-label="Domingo 6 de Junio" >
+            <time datetime="2020-06-06"><span>DOM</span> <br> <span>6</span></time>
+          </a>
+        </h2>
+        <h2 class="calendarDay">
+          <a href="./calendar-by-day.html">
+            <time datetime="2020-06-08"><span>LUN</span> <br> <span>7</span></time>
+          </a>
+        </h2>
+        <h2 class="calendarDay">
+          <a href="./calendar-by-day.html">
+            <time datetime="2020-06-08"><span>MAR</span> <br> <span>8</span></time>
+          </a>
+        </h2>
+        <h2 class="calendarDay">
+          <a href="./calendar-by-day.html">
+            <time datetime="2020-06-09"><span>MIE</span> <br> <span>9</span></time>
+          </a>
+        </h2>
+        <h2 class="calendarDay is-selected">
+          <a href="./calendar-by-day.html">
+            <time datetime="2020-06-10"><span>JUE</span> <br> <span>10</span></time>
+          </a>
+        </h2>
+        <h2 class="calendarDay">
+          <a href="./calendar-by-day.html">
+            <time datetime="2020-06-11"><span>VIE</span> <br> <span>11</span></time>
+          </a>
+        </h2>
+        <h2 class="calendarDay">
+          <a href="./calendar-by-day.html">
+            <time datetime="2020-06-12"><span>SAB</span> <br> <span>12</span></time>
+          </a>
+        </h2>
         <div class="hourCell">
           <!-- celda vacía -->
         </div>
 
         <div class="taskCell">
-          <div class="task">
+          <div class="task" tabindex="0" aria-label="de 05:00 a 06:00, hacer ejercicio">
             <p>Hacer ejercicio</p>
             <p><time datetime="05:00">5</time> - <time datetime="06:00">6 </time>am</p>
           </div>
         </div>
         <div class="taskCell">
-          <div class="task">
+          <div class="task" tabindex="0" aria-label="de 05:00 a 06:00, hacer ejercicio">
             <p>Hacer ejercicio</p>
             <p><time datetime="05:00">5</time> - <time datetime="06:00">6 </time>am</p>
           </div>
         </div>
         <div class="taskCell">
-          <div class="task">
+          <div class="task" tabindex="0" aria-label="de 05:00 a 06:00, hacer ejercicio">
             <p>Hacer ejercicio</p>
             <p><time datetime="05:00">5</time> - <time datetime="06:00">6 </time>am</p>
           </div>

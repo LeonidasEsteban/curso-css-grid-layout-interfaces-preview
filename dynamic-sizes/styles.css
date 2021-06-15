@@ -1,0 +1,27 @@
+body {
+  margin: 0;
+  background: lightgray;
+}
+
+.container {
+  block-size: 100vh;
+  display: grid;
+  /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+  /* grid-template-columns: auto auto auto auto; */
+  /* grid-template-columns: 25% 25% 25% 25%; */
+  /* grid-template-columns: calc(25% - 1rem) calc(25% - 1rem) calc(25% - 1rem) 25%; */
+  /* grid-template-columns: 500px 1fr 2fr 50%; */
+  grid-template-columns: auto 1fr 1fr auto;
+
+  gap: 1rem;
+}
+
+.item {
+  border: 5px solid red;
+}
+
+p {
+  margin: 20px;
+  display: inline-block;
+}
+

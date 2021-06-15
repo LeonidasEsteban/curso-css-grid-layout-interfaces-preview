@@ -1,29 +1,9 @@
 @import './task-cell.css';
-@import './caledar-day.css';
-@import './hour-cell.css';
-@import './timezone-cell.css';
 @import './task.css';
-
-.currentTime {
-  block-size: 2px;
-  background-color: var(--red10);
-  inline-size: 5rem;
-  position: absolute;
-  z-index: 2;
-  /* left: 0; */
-  /* right: 0; */
-}
-
-.currentTime::before {
-  content: '';
-  inline-size: 1rem;
-  block-size: 1rem;
-  display: block;
-  border-radius: 50%;
-  background: var(--red10);
-  position: absolute;
-  transform: translateY(-50%);
-}
+@import './caledar-day.css';
+@import './timezone-cell.css';
+@import './hour-cell.css';
+@import './current-time.css';
 
 .calendar {
   padding-inline: 1.5rem;
@@ -33,7 +13,6 @@
   --minCellBlockSize: 4rem;
   --maxCellBlockSize: auto;
   /* overflow: auto; */
-
   position: relative;
 }
 

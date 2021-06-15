@@ -1,18 +1,17 @@
 .task {
   color: var(--white);
+  font: var(--body2-medium);
   background-color: var(--blue10);
   padding-inline-start: 1rem;
   padding-inline-end: 1rem;
-  padding-block-start: 10px;
-  padding-block-end: 10px;
-  font-size: 12px;
+  padding-block-start: .625rem;
+  padding-block-end: .625rem;
+  font-size: .75rem;
   letter-spacing: 0.5%;
   display: flex;
   flex-direction: column;
-  gap: 4px;
-  border-radius: 4px;
-  font: var(--body2-medium);
-  position: relative;
+  gap: .25rem;
+  border-radius: .25rem;
 }
 
 .task p {

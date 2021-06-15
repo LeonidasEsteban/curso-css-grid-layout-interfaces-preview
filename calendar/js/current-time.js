@@ -4,7 +4,7 @@ function setCurrentTimePosition() {
   const currentHour = currentDate.getHours()
   const currentMin = currentDate.getMinutes()
 
-  console.log({ currentDay }, { currentHour })
+  // console.log({ currentDay }, { currentHour })
   const $currentTime = document.querySelector('.currentTime')
 
   const $calendar = document.querySelector('.calendar-week')
@@ -17,12 +17,12 @@ function setCurrentTimePosition() {
   const cellInlineSize = calendarInlineSize / 7
 
 
-  console.log({ calendarBlockSize }, { calendarInlineSize })
+  // console.log({ calendarBlockSize }, { calendarInlineSize })
   const calendarDayBlockSize = document.querySelector('.calendarDay').clientHeight
   calendarBlockSize = calendarBlockSize - calendarDayBlockSize
-  console.log({ calendarBlockSize })
+  // console.log({ calendarBlockSize })
   const cellBlockSize = calendarBlockSize / 24
-  console.log({ cellBlockSize }, { cellInlineSize })
+  // console.log({ cellBlockSize }, { cellInlineSize })
 
   $currentTime.style.top = `${cellBlockSize * (currentHour) + calendarDayBlockSize + (cellBlockSize / 60) * currentMin}px`
   $currentTime.style.left = `${cellInlineSize * (currentDay) + calendarTimezoneCellInlineSize + 24}px`

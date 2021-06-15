@@ -7,15 +7,6 @@
   font: var(--body3-regular);
   padding-inline-end: 1rem;
   place-self: start end;
-
-  /* Si logro manterner el sticky */
-  /* display: flex;
-  justify-content: flex-end;
-  align-items: flex-end; */
-  /* position: sticky;
-  left: 0;
-  background: var(--white); */
-
   position: relative;
 }
 
